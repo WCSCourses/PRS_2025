@@ -1,67 +1,76 @@
-# <img src="https://coursesandconferences.wellcomeconnectingscience.org/wp-content/themes/wcc_courses_and_conferences/dist/assets/svg/logo.svg" width="300" height="50">  Polygenic Risk Scores, Uganda, Africa
+# <img src="https://coursesandconferences.wellcomeconnectingscience.org/wp-content/themes/wcc_courses_and_conferences/dist/assets/svg/logo.svg" width="300" height="50">  
+# Polygenic Risk Scores, Uganda, Africa
 
-[Wellcome Connecting Science GitHub Home Page](https://github.com/WCSCourses) <br /> 
-[Wellcome Connecting Science Website](https://coursesandconferences.wellcomeconnectingscience.org/)
+### Add Course Dates, Add Course Location
+
+[Wellcome Connecting Science Course Run Website Link](https://coursesandconferences.wellcomeconnectingscience.org/event/polygenic-risk-score-analysis-africa-20250622/) <br /> 
+[Course Time Table 2025]()
+[Course Informatics Guide](https://github.com/WCSCourses/PRS_2025/blob/main/PRS_Course_InformaticsGuide.md)
 
 
 ## Summary
-The boost in collections of African genomic datasets provides opportunities for further in-depth understanding of the causes of human diseases. As African genomic data from genome-wide analytical studies continues to grow, it is imperative that African scientists are empowered with skills to analyse these data using the latest tools and approaches for advancing research and genomics applications in Africa and globally. 
+The growing availability of African genomic datasets is opening new opportunities to deepen our understanding of the aetiology of human diseases. As African genomic data from genome-wide analytical studies continues to grow, it is crucial to empower African scientists with the tools and approaches needed to analyse these data using state-of-the-art tools and methodologies, advancing research and genomics applications both in Africa and globally.
 
-This short course will equip scientists based in Africa with tools and approaches for polygenic risk scores (PRS) analysis. The course will cover both applied and theoretical topics in PRS research, delivered across a variety of lectures, tutorials, computational practicals and special guest seminars from experts in the field. By the end of the workshop, attendees should have an in-depth theoretical understanding and practical skills in PRS analysis of global populations. 
+This short course is designed to equip scientists based in Africa with the skills and knowledge to perform polygenic risk scores (PRS) analysis. Participants will explore both theoretical and practical aspects of PRS research through lectures, tutorials, hands-on computational sessions, and guest seminars by experts in the field. By the end of the workshop, attendees will have a strong grasp of PRS concepts and practical expertise to analyse global genomic data.
 
-The course will begin with an overview of genome-wide association studies, an introduction to PRS analysis, advanced topics in PRS (e.g., pathway-based PRS, PRS Environment interactions, PRS to identify rare variants). This will be followed by the key topic of the ‘PRS Portability Problem’ and how to address it using PRS methods developed for application to diverse and admixed ancestry samples. Finally, attendees will devise, perform and present their own research project as part of a group on a topic relevant to the content of the course, with feedback from the workshop team. 
+The course begins with a high-level overview of genome-wide association studies, followed by foundational and advanced topics in PRS, such as pathway-based PRS and methods for identifying rare variants. A key focus will be the “PRS Portability Problem” and strategies for applying PRS to diverse and admixed ancestry samples. The workshop concludes with group projects where participants design, conduct, and present research, receiving feedback from the workshop team.
 
-# Target Audience
+## Target audience
 
-Students and scientists based in Africa who are interested in the theory and/or application of polygenic risk scores, important for those undertaking research in: Bioinformatics, Genetic Epidemiology, Population Genetics, Statistical Genetics, Clinical Genetics, and Quantitative Genetics. 
+Students and scientists based in Africa who are interested in the theory and/or application of polygenic risk scores, important for those undertaking research in: Bioinformatics, Genetic Epidemiology, Population Genetics, Statistical Genetics, Clinical Genetics, and Quantitative Genetics.
 
-#  Programme
-The course will run over 5 days and will include lectures, tutorials, computational practicals and special guest seminars from experts in the field. There will be multiple opportunities to meet the training team on 1:1 setting, and to interact with other attendees and the workshop team throughout the week, helping to foster a supportive, collegiate and interactive environment to maximise learning for all.
+## Learning outcomes
+By the end of the course, participants will be able to:
 
-# Topics overview
-
-- Overview of Genome-Wide Association Study (GWAS): GWAS basics and GWAS for PRS
-- Introduction to PRS: calculating PRS, running PRS software, interpreting PRS results
-- Advanced PRS topics: pathway PRS, PRS to detect rare variants
-- PRS in diverse ancestries: the PRS Portability Problem, PRS methods for addressing portability problems, PRS for diverse and admixed population samples
-- PRS mini research project: Group project devised, performed and presented on a topic related to content from the week, performed in groups of 4-5 attendees. 
-
-# Learning outcomes
-
-**At the end of the course, participants will be able to:**
-
-- Discuss the application of GWAS and PRS methods to understand disease aetiology.
-- Explain the application of PRS in determination of complex disease genetic risk 
-- Perform essential steps for PRS analysis using standard approaches and tools.
-- Apply relevant tools and software to analyse complex global (diverse and admixed) population genomics datasets.
+- Analyse the use of GWAS and PRS methods in investigating the genetic basis of disease aetiology.
+- Describe how PRS is used to determine complex disease genetic risk.
+- Perform key steps in PRS analysis using standard methodologies and tools.
+- Utilise appropriate tools and software to analyse global genomic datasets from diverse and admixed populations.
 - Evaluate and interpret results generated from PRS analyses.
-- Customise visualisation of results from PRS analyses.
+- Customise data visualisations to effectively present PRS analysis results.
 
-**Course Runs**      
+## Programme
+The course will run over five and a half days (Sunday to Friday) and will include a combination of lectures, tutorials, computational practicals, and special guest seminars from leading experts in the field. Participants will have multiple opportunities to engage with the training team in a one-to-one setting, as well as to interact with other attendees throughout the week. This approach is designed to foster a supportive, collegiate, and interactive environment, maximising learning for all participants.
 
-| Course Date | Course Title | Location |Citation DOI |
-|-------------|--------------|----------|-------------|
-| 2–7 July 2023 | [Polygenic Risk Scores Africa 2023](https://github.com/WCSCourses/PRS_2023) | Makerere University, Kampala, Uganda | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12667215.svg)](https://doi.org/10.5281/zenodo.12667215)|
-| 9–14 June 2024  | [Polygenic Risk Scores Africa 2024](https://github.com/WCSCourses/PRS_2024) | Makerere University, Kampala, Uganda |[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12723490.svg)](https://doi.org/10.5281/zenodo.12723490)|
-| 22-27 June 2025 | [Polygenic Risk Scores Africa 2023](https://github.com/WCSCourses/PRS_2025) | Makerere University, Kampala, Uganda | coming soon..|
+The course will begin with an introduction to Polygenic Risk Scores (PRS), providing a solid foundation before progressing to more advanced topics. The week will conclude with a mini research project, carried out in groups of 4–5 participants. This project will enable attendees to apply their PRS knowledge and skills in a practical, real-time setting.
+
+## Course Topics
+
+- Introduction to PRS: Genome-Wide Association Studies (GWAS) for PRS, calculating PRS, running PRS software, interpreting PRS results
+- Advanced PRS Topics: pathway PRS, PRS to detect rare variants
+- PRS in Diverse Ancestries: the PRS portability problem, methods for addressing PRS portability issues, PRS for diverse and admixed population samples
+
+**Course Instructors**      
+
+- [Itunuoluwa Isewon](), Covenant University, Nigeria  
+- [Conrad Iyegbe](), Icahn School of Medicine at Mount Sinai
+- [Segun Fatumo](), Queen Mary University of London and MRC Uganda
+
+**Wellcome Connecting Science Team**
+
+- [Michelle Bishop](https://www.wellcomeconnectingscience.org/person/bishop-michelle/#), Associate Director of Learning and Training at Wellcome Connecting Science
+- [Alice Matimba](https://uk.linkedin.com/in/alice-matimba-8805177), Head of Training and Global Capacity
+- [Mel Sharpe](https://www.wellcomeconnectingscience.org/person/sharpe-mel/), Systems and Processes Manager
+- [Isabela Malta](https://www.wellcomeconnectingscience.org/person/malta-isabela/), Assistant Overseas Courses Manager
+- [Vaishnavi Vikas Gangadhar](https://www.wellcomeconnectingscience.org/person/gangadhar-vaishnavi/), Informatics Technical Officer
 
 ******
 
-## Citing and Re-using Course Material
+### Citing and Re-using Course Material
 
 The course data are free to reuse and adapt with appropriate attribution. All course data in these repositories are licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> 
 
-## Interested in attending a course?
+Each course landing page is assigned a DOI via Zenodo, providing a stable and citable reference. These DOIs can be found on the respective course landing pages and can be included in CVs or research publications, offering a professional record of the course contributions.
 
-Take a look what courses are coming up at [Wellcome Connecting Science Courses & Conference Website](https://coursesandconferences.wellcomeconnectingscience.org/our-events/).
+### Interested in attending a course?
+
+Take a look at what courses are coming up at [Wellcome Connecting Science Courses & Conference Website](https://coursesandconferences.wellcomeconnectingscience.org/our-events/).
 
 ---
 
-For more information or queries, feel free to contact us via the [Wellcome Connecting Science website](https://coursesandconferences.wellcomeconnectingscience.org).
-
-<br /> 
-
+For more information or queries, feel free to contact us via the [Wellcome Connecting Science website](https://coursesandconferences.wellcomeconnectingscience.org).<br /> 
 Find us on socials [Wellcome Connecting Science Linktr](https://linktr.ee/eventswcs)
 
-[Wellcome Connecting Science GitHub Home Page](https://github.com/WCSCourses) 
+---
 
+[Wellcome Connecting Science GitHub Home Page](https://github.com/WCSCourses) <br /> 
