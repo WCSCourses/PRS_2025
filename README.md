@@ -4,7 +4,7 @@
 ### Add Course Dates, Add Course Location
 
 [Wellcome Connecting Science Course Run Website Link](https://coursesandconferences.wellcomeconnectingscience.org/event/polygenic-risk-score-analysis-africa-20250622/) <br /> 
-[Course Time Table 2025]()
+[Course Time Table 2025]() <br /> 
 [Course Informatics Guide](https://github.com/WCSCourses/PRS_2025/blob/main/PRS_Course_InformaticsGuide.md)
 
 
