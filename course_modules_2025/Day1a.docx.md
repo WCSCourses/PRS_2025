@@ -13,10 +13,82 @@
  Linux subsystems or Virtual Machines), it will be highly beneficial to
  become familiar with performing research in a Unix-only environment.
 
+## What is a shell and why should I care?
+
+A *shell* is a computer program that presents a command line interface
+which allows you to control your computer using commands entered
+with a keyboard instead of controlling graphical user interfaces
+(GUIs) with a mouse/keyboard/touchscreen combination.
+
+There are many reasons to learn about the shell:
+
+- Many bioinformatics tools can only be used through a command line interface. Many more
+  have features and parameter options which are not available in the GUI.
+  BLAST is an example. Many of the advanced functions are only accessible
+  to users who know how to use a shell.
+- The shell makes your work less boring. In bioinformatics you often need to repeat tasks with a large number of files. With the shell, you can automate those repetitive tasks and leave you free to do more exciting things.
+- The shell makes your work less error-prone. When humans do the same thing a hundred different times
+  (or even ten times), they're likely to make a mistake. Your computer can do the same thing a thousand times
+  with no mistakes.
+- The shell makes your work more reproducible. When you carry out your work in the command-line
+  (rather than a GUI), your computer keeps a record of every step that you've carried out, which you can use
+  to re-do your work when you need to. It also gives you a way to communicate unambiguously what you've done,
+  so that others can inspect or apply your process to new data.
+- Many bioinformatic tasks require large amounts of computing power and can't realistically be run on your
+  own machine. These tasks are best performed using remote computers or cloud computing, which can only be accessed
+  through a shell.
+
+In this lesson you will learn how to use the command line interface to move around in your file system.
+
+## How to access the shell
+
+On a Mac or Linux machine, you can access a shell through a program called "Terminal", which is already available
+on your computer. The Terminal is a window into which we will type commands. If you're using Windows,
+you'll need to download a separate program to access the shell.
+
+To save time, we are going to be working on a remote server where all the necessary data and software available.
+When we say a 'remote server', we are talking about a computer that is not the one you are working on right now.
+You will access the Carpentries remote server where everything is prepared for the lesson.
+We will learn the basics of the shell by manipulating some data files. Some of these files are very large
+, and would take time to download to your computer.
+We will also be using several bioinformatic packages in later lessons and installing all of the software
+would take up time even more time. A 'ready-to-go' server lets us focus on learning.
 
 ## Moving around the File System
 
- To begin our practical, please open up a \"terminal\" on your computer
+The part of the operating system that manages files and directories
+is called the **file system**.
+It organizes our data into files,
+which hold information,
+and directories (also called "folders"),
+which hold files or other directories.
+
+Several commands are frequently used to create, inspect, rename, and delete files and directories.
+```bash
+$
+```
+
+The dollar sign is a **prompt**, which shows us that the shell is waiting for input;
+your shell may use a different character as a prompt and may add information before
+the prompt. When typing commands, either from these lessons or from other sources,
+do not type the prompt, only the commands that follow it.
+
+Let's find out where we are by running a command called `pwd`
+(which stands for "print working directory").
+At any moment, our **current working directory**
+is our current default directory,
+i.e.,
+the directory that the computer assumes we want to run commands in,
+unless we explicitly specify something else.
+Here,
+the computer's response is `/data`,
+which is the top level directory within our cloud system:
+
+```bash
+$ pwd
+```
+
+To begin our practical, please open up a \"terminal\" on your computer
  (on a Mac this is stored in Applications/Utilities/).
 
  We can change our directory using the following command:
@@ -46,6 +118,42 @@
 ## Looking at the Current Directory
 
  Next we can move into the **~/data/Day1a_Data/Day1a_Data** folder (from the data/ folder type: cd Day1a_Data/Day1a_Data). We can list out
+
+ Let's look at how our file system is organized. We can see what files and subdirectories are in this directory by running `ls`,
+which stands for "listing":
+
+```bash
+$ ls
+```
+
+`ls` prints the names of the files and directories in the current directory in
+alphabetical order,
+arranged neatly into columns.
+
+We can make the `ls` output more comprehensible by using the **flag** `-F`,
+which tells `ls` to add a trailing `/` to the names of directories:
+
+```bash
+$ ls -F
+```
+Anything with a "/" after it is a directory. Things with a "\*" after them are programs. If
+there are no decorations, it's a file.
+
+`ls` has lots of other options. To find out what they are, we can type:
+
+```bash
+$ man ls
+```
+
+`man` (short for manual) displays detailed documentation (also referred as man page or man file)
+for `bash` commands. It is a powerful resource to explore `bash` commands, understand
+their usage and flags. Some manual files are very long. You can scroll through the
+file using your keyboard's down arrow or use the <kbd>Space</kbd> key to go forward one page
+and the <kbd>b</kbd> key to go backwards one page. When you are done reading, hit <kbd>q</kbd>
+to quit.
+
+
+to read and write to the file.
  the folder content by typing: 
 
         ls
@@ -61,6 +169,75 @@
 
         ls -lS  # shows the files as a list sorted by size
 
+The additional information given includes the name of the owner of the file,
+when the file was last modified, and whether the current user has permission
+
+## Full vs. Relative Paths
+
+The `cd` command takes an argument which is a directory
+name. Directories can be specified using either a *relative* path or a
+full *absolute* path. The directories on the computer are arranged into a
+hierarchy. The full path tells you where a directory is in that
+hierarchy. Navigate to the home directory, then enter the `pwd`
+command.
+
+```bash
+$ cd  
+$ pwd  
+```
+
+You will see:
+
+```output
+/home/data
+```
+
+This is the full name of your home directory. This tells you that you
+are in a directory called `data`, which sits inside a directory called
+`home` which sits inside the very top directory in the hierarchy. The
+very top of the hierarchy is a directory called `/` which is usually
+referred to as the *root directory*. So, to summarize: `data` is a
+directory in `home` which is a directory in `/`. More on `root` and
+`home` in the next section.
+
+Now enter the following command:
+
+```bash
+$ cd /home/Data/Day_1a/
+```
+
+This jumps forward multiple levels to the `Day_1a` directory.
+Now go back to the home directory.
+
+```bash
+$ cd
+```
+
+You can also navigate to the `Day_1a` directory using:
+
+```bash
+$ cd /Data/Day_1a/
+```
+
+These two commands have the same effect, they both take us to the `Day_1a` directory.
+The first uses the absolute path, giving the full address from the home directory. The
+second uses a relative path, giving only the address from the working directory. A full
+path always starts with a `/`. A relative path does not.
+
+A relative path is like getting directions from someone on the street. They tell you to
+"go right at the stop sign, and then turn left on Main Street". That works great if
+you're standing there together, but not so well if you're trying to tell someone how to
+get there from another country. A full path is like GPS coordinates. It tells you exactly
+where something is no matter where you are right now.
+
+You can usually use either a full path or a relative path depending on what is most convenient.
+If we are in the home directory, it is more convenient to enter the full path.
+If we are in the working directory, it is more convenient to enter the relative path
+since it involves less typing.
+
+Over time, it will become easier for you to keep a mental note of the
+structure of the directories that you are using and how to quickly
+navigate amongst them.
 
 
 ## Counting Number of Lines in File
@@ -112,6 +289,140 @@
   ```bash 
    grep -f Select.sample TAR.height | wc -l
 ```
+
+## Creating, moving, copying, and removing
+
+Now we can move around in the file structure, look at files, and search files. But what if we want to copy files or move
+them around or get rid of them? Most of the time, you can do these sorts of file manipulations without the command line,
+but there will be some cases (like when you're working with a remote computer like we are for this lesson) where it will be
+impossible. You'll also find that you may be working with hundreds of files and want to do similar manipulations to all
+of those files. In cases like this, it's much faster to do these operations at the command line.
+
+### Copying Files
+
+When working with computational data, it's important to keep a safe copy of that data that can't be accidentally overwritten or deleted.
+For this lesson, our raw data is our FASTQ files.  We don't want to accidentally change the original files, so we'll make a copy of them
+and change the file permissions so that we can read from, but not write to, the files.
+
+First, let's make a copy of one of our FASTQ files using the `cp` command.
+
+Navigate to the `shell_data/untrimmed_fastq` directory and enter:
+
+```bash
+$ cp GIANT_Height.txt GIANT_Height-copy.txt
+$ ls -F
+```
+
+```output
+GIANT_Height.txt GIANT_Height-copy.txt
+```
+
+We now have two copies of the `GIANT_Height.txt` file, one of them named `GIANT_Height-copy.txt`. We'll move this file to a new directory
+called `backup` where we'll store our backup data files.
+
+### Creating Directories
+
+The `mkdir` command is used to make a directory. Enter `mkdir`
+followed by a space, then the directory name you want to create:
+
+```bash
+$ mkdir backup
+```
+
+### Moving / Renaming
+
+We can now move our backup file to this directory. We can
+move files around using the command `mv`:
+
+```bash
+$ mv GIANT_Height-copy.txt backup
+$ ls backup
+```
+
+```output
+GIANT_Height-copy.txt
+```
+
+The `mv` command is also how you rename files. Let's rename this file to make it clear that this is a backup:
+
+```bash
+$ cd backup
+$ mv GIANT_Height-copy.txt GIANT_Height-backup.txt
+$ ls
+```
+
+```output
+GIANT_Height-backup.txt
+```
+
+### File Permissions
+
+We've now made a backup copy of our file, but just because we have two copies, it doesn't make us safe. We can still accidentally delete or
+overwrite both copies. To make sure we can't accidentally mess up this backup file, we're going to change the permissions on the file so
+that we're only allowed to read (i.e. view) the file, not write to it (i.e. make new changes).
+
+View the current permissions on a file using the `-l` (long) flag for the `ls` command:
+
+```bash
+$ ls -l
+```
+
+
+The first part of the output for the `-l` flag gives you information about the file's current permissions. There are ten slots in the
+permissions list. The first character in this list is related to file type, not permissions, so we'll ignore it for now. The next three
+characters relate to the permissions that the file owner has, the next three relate to the permissions for group members, and the final
+three characters specify what other users outside of your group can do with the file. We're going to concentrate on the three positions
+that deal with your permissions (as the file owner).
+
+![](fig/rwx_figure.svg){alt='Permissions breakdown'}
+
+Here the three positions that relate to the file owner are `rw-`. The `r` means that you have permission to read the file, the `w`
+indicates that you have permission to write to (i.e. make changes to) the file, and the third position is a `-`, indicating that you
+don't have permission to carry out the ability encoded by that space (this is the space where `x` or executable ability is stored, we'll
+talk more about this in [a later lesson](05-writing-scripts.md)).
+
+Our goal for now is to change permissions on this file so that you no longer have `w` or write permissions. We can do this using the `chmod` (change mode) command and subtracting (`-`) the write permission `-w`.
+
+```bash
+$ chmod -w GIANT_Height-backup.txt
+$ ls -l 
+```
+
+
+### Removing
+
+To prove to ourselves that you no longer have the ability to modify this file, try deleting it with the `rm` command:
+
+```bash
+$ rm GIANT_Height-backup.txt
+```
+
+You'll be asked if you want to override your file permissions:
+
+```output
+rm: remove write-protected regular file ‘GIANT_Height-backup.txt'? 
+```
+
+You should enter `n` for no. If you enter `n` (for no), the file will not be deleted. If you enter `y`, you will delete the file. This gives us an extra
+measure of security, as there is one more step between us and deleting our data files.
+
+**Important**: The `rm` command permanently removes the file. Be careful with this command. It doesn't
+just nicely put the files in the Trash. They're really gone.
+
+By default, `rm` will not delete directories. You can tell `rm` to
+delete a directory using the `-r` (recursive) option. Let's delete the backup directory
+we just made.
+
+Enter the following command:
+
+```bash
+$ cd ..
+$ rm -r backup
+```
+
+This will delete not only the directory, but all files within the directory. If you have write-protected files in the directory,
+you will be asked whether you want to override your permission settings.
+
 
 
 ## Filtering and Reshuﬄing Files
