@@ -21,10 +21,10 @@ Qn4. Apply you analysis plan in Qn3 and determine the predictivity of the interg
  **Group 4** Subcutaneous adipose tissue (SAT) https://github.com/tinashedoc/cvx/blob/main/satdta.txt<br>
 
  ## Milestones to guide with project completion
- **1.** Assign tasks and roles to group members to tackle the project ensuring the tasks can be completed in parallel
- **2.** Ensure you complete Qn 1 and Qn 2 by Wednesday is these do not require analysis
- **3.** You need to write up and finalise the analysis plan by Thursday
- **4.** Run the analysis and finalise your work for presentation on Friday
+ **1.** Assign tasks and roles to group members to tackle the project ensuring the tasks can be completed in parallel.<br>
+ **2.** Ensure you complete Qn 1 and Qn 2 by Wednesday as these do not require  data analysis.<br>
+ **3.** You need to write up and finalise the analysis plan by Thursday.<br>
+ **4.** Run the analysis and finalise your work for presentation on Friday.<br>
  
 
 
