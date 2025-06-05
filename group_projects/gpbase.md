@@ -2,7 +2,7 @@
 
 ## Background
 
-You have just completed the Wellcome Connecting Science PRS course and are now acquainted with tools such as PRSice, PRSCSx, and BRIDGEPRS, which claim to improve PRS prediction in Africans. You are now getting overwhelmed by the sheer number of tools to test out and do not know which tool to use for your PRS project, which involves continental Africans. You decide to read more, and you then stumble across a novel approach called PRSmix, which integrates PRSs developed using diverse methods, forming an integrated PRS that has been noted to outperform previously reported PRS, as shown below. This seems as a much more pragmatic approach, and you are eager to apply it to your PRS projects.
+You have just completed the Wellcome Connecting Science PRS course and are now acquainted with tools such as PRSice, PRSCSx, and BRIDGEPRS, which claim to improve PRS prediction in Africans. You are now getting overwhelmed by the sheer number of tools to test out and do not know which tool to use for your PRS project, which involves continental Africans. You decide to read more, and you then stumble across a novel approach called PRSmix (shown below) by Troung et al.(2024), which integrates PRSs developed using diverse methods, forming an integrated PRS that has been noted to outperform previously reported PRS, as shown below. This seems as a much more pragmatic approach, and you are eager to apply it to your PRS projects.
 
 ![image](https://github.com/user-attachments/assets/a03786e7-f2ee-46e0-b542-1c3d546e1d76)
 
