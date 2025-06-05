@@ -9,10 +9,10 @@ You have just completed the Wellcome Connecting Science PRS course and are now a
 
 
 ## Questions
-Qn1. Do you think the PRSmix approach will predict well in continental Africans? Discuss?
-Qn2. What metrics will you use to evaluate the predictivity of the PRS for the trait you have been assigned?
-Qn3. May you outline the steps and sample code you will use to apply the PRSmix approach to the trait you have been assigned? 
-Qn4. Apply you analysis plan in Qn3 and determine the predictivity of the intergrated PRS using the PRSmix approach
+Qn1. Do you think the PRSmix approach will predict well in continental Africans? Discuss?<br>
+Qn2. What metrics will you use to evaluate the predictivity of the PRS for the trait you have been assigned?<br>
+Qn3. May you outline the steps and sample code you will use to apply the PRSmix approach to the trait you have been assigned?<br> 
+Qn4. Apply you analysis plan in Qn3 and determine the predictivity of the intergrated PRS using the PRSmix approach.<br>
 
 ## Analytical datasets
  **Group 1** Glycated hemoglobin (HbA1C) https://github.com/tinashedoc/cvx/blob/main/hba1cdta.txt<br> 
