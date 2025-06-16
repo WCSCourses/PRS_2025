@@ -16,6 +16,7 @@
 | [BCFtools](http://www.htslib.org/) | v1.19 | Variant processing | Working with VCFs |
 | [RStudio](https://posit.co/download/rstudio-desktop/) | Latest | All R-based sessions | GUI for R |
 | [Rcpp](https://cran.r-project.org/package=Rcpp) | Latest | R sessions | Required dependency |
+| [RFMix2](https://github.com/slowkoni/rfmix) | Latest |  |  |
 | [reshape2](https://cran.r-project.org/package=reshape2) | Latest | R sessions | Data reshaping |
 | [viridisLite](https://cran.r-project.org/package=viridisLite) | Latest | R sessions | Plotting color palettes |
 | [viridis](https://cran.r-project.org/package=viridis) | Latest | R sessions | Color palettes for ggplot2 |
