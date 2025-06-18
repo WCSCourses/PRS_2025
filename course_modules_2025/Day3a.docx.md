@@ -1,6 +1,6 @@
 # Advanced Polygenic Risk Score Analyses
 
-## Day 3 - Polygenic Risk Score Analyses Workshop 2024
+## Day 3 - Polygenic Risk Score Analyses Workshop 2025
 
 ## Table of Contents
 
