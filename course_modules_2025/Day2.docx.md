@@ -303,7 +303,7 @@ PRSice performs strand flipping and clumping automatically and generates the **H
 
 For now, we can ignore most columns and focus on the **PRS.R2** and the **P** column, which provide information on the model fit.
 
-![Figue](/images/Day2.docxfolder/Height.gws_BARPLOT_2023-07-03.png)
+![Figue](/course_data_2025/images/Day2.docxfolder/CAD.highresBARPLOT2023-06-23.png)
 
 ---
 >
