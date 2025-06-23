@@ -250,7 +250,7 @@ The command above performs clumping on the height GWAS using LD calculated based
 ><details>
 > <summary>Answer</summary>     
 >
-> 162,275 variants     
+> 163,275 variants     
 >
 ></details>
 > 
