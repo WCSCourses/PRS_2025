@@ -115,7 +115,7 @@ In all of the instructions below:
 
 2.  Navigate to the Day 1b working directory
     
-            cd ~/data/Data_Day1b/
+            cd ~/Data_Day1b/Data_Day1b/
             
 3.  List all files in this directory by typing 
    
