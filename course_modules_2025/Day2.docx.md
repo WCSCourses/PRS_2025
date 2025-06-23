@@ -516,7 +516,7 @@ Rscript ~/PRSice.R --prsice ~/PRSice_linux --base Base_Data/cad.add.txt --target
 ><details>
 > <summary>Answer</summary>     
 >
-> 0.39 and 0.001, respectively
+> 0.039 and 0.001, respectively
 >
 ></details>
 >
