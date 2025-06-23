@@ -200,7 +200,7 @@ for each copy of the *effect allele*. For example, if the effect
 
 ---
 <a href="#top">[Back to Table of Contents](#table-of-contents)</a>
-
+**
 
 ### Performing Clumping
 
@@ -258,6 +258,33 @@ The command above performs clumping on the height GWAS using LD calculated based
 > 
 ---
 <a href="#top">[Back to Table of Contents](#table-of-contents)</a>
+
+### Checking the GIANT_Height.txt file
+To ensure that the next step run without errors we need to check that the first line in the base_data file (GIANT_Height.txt) have the correct heading.
+
+Run
+'''
+head Base_Data/GIANT_Height.txt
+'''
+Check that the first line is not empty
+'''
+head -n 1 Base_Data/GIANT_Height.txt
+'''
+This is comes out blank then it means the first line does not have the heading required for PRSice to run, hence we need to correct this.
+Check that the first two lines of the Base_Data file
+'''
+head -n 2 Base_Data/GIANT_Height.txt
+'''
+Remove the empty line by running
+'''
+sed -i '1d' Base_Data/GIANT_Height.txt
+'''
+Recheck to see this error is correct
+Check that the first line is not empty
+'''
+head -n 1 Base_Data/GIANT_Height.txt
+'''
+Now we can proceed with the next steps.
 
 ## P-Value Thresholding
 
