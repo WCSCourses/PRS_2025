@@ -272,7 +272,7 @@ Check that the first line is not empty
 head -n 1 Base_Data/GIANT_Height.txt
 ```
 
-This is comes out blank then it means the first line does not have the heading required for PRSice to run, hence we need to correct this.
+If this comes out blank then it means the first line does not have the heading required for PRSice to run, hence we need to correct this.
 Check that the first two lines of the Base_Data file
 
 ```
@@ -284,7 +284,7 @@ Remove the empty line by running
 sed -i '1d' Base_Data/GIANT_Height.txt
 ```
 
-Recheck to see this error is correct
+Recheck to see this error is corrected
 
 Check that the first line is not empty
 ```
