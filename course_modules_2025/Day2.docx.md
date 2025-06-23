@@ -541,7 +541,7 @@ Rscript ~/PRSice.R --prsice ~/PRSice_linux --base Base_Data/cad.add.txt --target
 > 
 ---
 ```
-Rscript ~/PRSice.R --prsice ~/PRSice_linux --base Base_Data/GIANT_Height.txt --target Target_Data/TAR --snp MarkerName --A1 Allele1 --A2 Allele2 --stat b --beta --pvalue p --pheno Target_Data/CAD.pheno --binary-target T --out Results/Cross.highres
+Rscript ~/PRSice.R --prsice ~/PRSice_linux --base Base_Data/GIANT_Height.txt --target Target_Data/TAR --snp MarkerName --A1 Allele1 --A2 Allele2 --stat b --beta --pvalue p --pheno CAD.pheno --binary-target T --out Results/Cross.highres
 ```
 ---
 
