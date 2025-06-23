@@ -158,7 +158,7 @@ for each copy of the *effect allele*. For example, if the effect
 >
 > In the GIANT_Height.txt, SNPs effect sizes are reported as 𝛽 coefficient and measures the effect of the 'effect allele'. So, first check identify which allele is the effect allele for the SNPs of interest
 >```
->grep -E 'rs4747841|rs878177' ./Base_data/GIANT_Height.txt
+>grep -E 'rs4747841|rs878177' Base_Data/GIANT_Height.txt
 >```
 > rs4747841 A G 0.551 -0.0011 0.0029 0.7 253213
 >
