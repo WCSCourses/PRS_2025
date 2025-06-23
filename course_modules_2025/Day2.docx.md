@@ -53,7 +53,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > 
 > The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following command.
 > ```
-> cd ~/Day2_Target_Data/Day2_Target_Data
+> cd ~/Day2_Target_Data
 > ```
 > ```
 > mv ~/Downloads/Day2_Base_Data.zip ~/data/Day2_Target_Data/Day2_Target_Data
