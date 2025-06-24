@@ -74,7 +74,7 @@ BridgePRS is most commonly used to combine the power of a smaller ancestry-match
    and (ii) where are they located?
 
 #### Tasks
-- Incorporate the config path information into the code template provided below (for both European and African .config files).
+- Incorporate the config path information into the code template provided below (for both the European and African .config files).
 - Based on your-recent understanding of genetic distances between continental populations, choose a sensible    
   value of the --fst parameter to reflect the genetic distance between Africans and Europeans. This extra information will inform the prior   distribution from which posterior effect weights for the target population will be calculated. This needs to be done before attempting to
   run the code given below.
@@ -87,17 +87,17 @@ Add the missing peices of information to the code below, as you enter it into yo
 
 #### Tasks
 - After running the above code, navigate to the output directory: ./out_config-EUR-AFR-easyrun to inspect the results.
-- Open either of the 2 plots that you see in the directory.
+- Open either of the 2 plots that you see in the directory (they are the same, - the only difference is the file format used to present the results).
 
 #### Questions
 6. In the summary plot, which set of values expresses the correlation between the weights calculated by BridgePRS and
    the beta weights from the initial GWASs?
-8. In which output directory will you find precise values of variance explained by the prs-combined-AFR model?
-9. What is the variance explained by the prs-combined-AFR model?
+8. In which output directory will you find estimates of variance explained by the joint EUR and AFR (named "prs-combined-AFR") model?
+9. What is the value of variance explained by the prs-combined-AFR model?
 
 ### Short Quiz
 I have GWAS data and genotype/phenotype data for a cohort consisting of >2000 samples from a small East European population. 
-The population LD structure is unique and so I would like this information to be incorporated into my PRS prediction model. I additionally have GWAS and genotype/phenotype data from the UKB biobank that I want to include. How should I formulate the relevant Config files for the BridgePRS analysis?
+The population LD structure is unique and so I would like this information to be incorporated into my PRS prediction model. I additionally have GWAS and genotype/phenotype data from the UKB biobank that I want to include. How should I formulate the corresponding Config files for the BridgePRS analysis?
 
 #### File types
 ```
