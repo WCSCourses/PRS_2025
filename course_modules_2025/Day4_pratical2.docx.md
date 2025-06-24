@@ -56,8 +56,10 @@ In this step we opt to select the continuous version of the trait for analysis.
 #### Task
 Enter the following plot command: 
 ```
-xdg-open ./out_config-AFR-single/prs-single_AFRICA/bridgePRS-single.png and inspect the accompanying slot
+xdg-open ./out_config-AFR-single/prs-single_AFRICA/bridgePRS-single.png
 ```
+and inspect the accompanying slot.
+
 <br><br> 
 
 ### BridgePRS Scenario 2:  Prediction into African target data using European and African summary statistics
