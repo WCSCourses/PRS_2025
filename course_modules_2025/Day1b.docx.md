@@ -388,7 +388,7 @@ Here we repeat the previous analysis but this time including some covariates. Th
 
 Run the analysis specifying the covariates file:
 
-  plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --covar D1D.pcs.1234 --out D1D_CC_PCadj
+  plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --covar D1D.pcs1234 --out D1D_CC_PCadj
 
 - What are the raw and Bonferroni-adjusted p-values for the top hit?
 - What does this mean - is there a significant association?
