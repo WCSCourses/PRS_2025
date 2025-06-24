@@ -54,11 +54,11 @@ In this step we opt to select the continuous version of the trait for analysis.
 4. What evidence can you see that the analysis was successfully executed?
 
 #### Task
-Enter the following plot command: 
+Enter the following plot command and inspect the accompanying slot: 
 ```
 xdg-open ./out_config-AFR-single/prs-single_AFRICA/bridgePRS-single.png
 ```
-and inspect the accompanying slot.
+
 
 <br><br> 
 
