@@ -89,6 +89,10 @@ Add the missing peices of information to the code below, as you enter it into yo
 - After running the above code, navigate to the output directory: ./out_config-EUR-AFR-easyrun to inspect the results.
 - Open either of the 2 plots that you see in the directory (they are the same, - the only difference is the file format used to present the results).
 
+```
+xdg-open ./out_easyrun-EUR-AFR/bridgePRS-combo.png
+```
+
 #### Questions
 6. In the summary plot, which set of values expresses the correlation between the weights calculated by BridgePRS and
    the beta weights from the initial GWASs?
