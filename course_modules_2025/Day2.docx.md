@@ -259,40 +259,6 @@ The command above performs clumping on the height GWAS using LD calculated based
 ---
 <a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
-### Checking the GIANT_Height.txt file
-To ensure that the next step run without errors we need to check that the first line in the base_data file (GIANT_Height.txt) have the correct heading.
-
-Run
-```
-head Base_Data/GIANT_Height.txt
-```
-
-Check that the first line is not empty
-```
-head -n 1 Base_Data/GIANT_Height.txt
-```
-
-If this comes out blank then it means the first line does not have the heading required for PRSice to run, hence we need to correct this.
-Check that the first two lines of the Base_Data file
-
-```
-head -n 2 Base_Data/GIANT_Height.txt
-```
-
-Remove the empty line by running
-```
-sed -i '1d' Base_Data/GIANT_Height.txt
-```
-
-Recheck to see this error is corrected
-
-Check that the first line is not empty
-```
-head -n 1 Base_Data/GIANT_Height.txt
-```
-
-Now we can proceed with the next steps.
-
 ## P-Value Thresholding
 
  Deciding which SNPs to include in the calculation of PRS is one of the major challenges in the field. A simple and popular approach is to include SNPs according to their GWAS association 𝑃-value. For example, we may choose to include only the genome-wide significant SNPs from the GWAS because those are the SNPs with significant evidence for association. In the next subsection you will compute PRS from GW-significant SNPs only, and then in the subsequent subsection you will generate multiple PRSs using different 𝑃-value thresholds.
