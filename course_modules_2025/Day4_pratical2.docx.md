@@ -33,8 +33,8 @@ In this example we will run BridgePRS across chromosomes 1 - 22. The first requi
 #### Questions
 From the on-screen output:
 1. Do you notice anything interesting in the way BridgePRS handled the phenotype file?
-2. How many phenotypes was BridgePRS able to identify in the phenotype file? in what way do these phenotypes differ?
-3. Which resulting files have been generated in ./out/save/ ?
+2. How many phenotypes was BridgePRS able to identify in the phenotype file? in what way do they  differ?
+3. What output files were generated in ./out_config-AFR-single/save/ ?
 
 #### Note
 In the next code snippet the file path of the newly created .config (configuration) file has been incorporated into the run command. This information was provided as part of the on-screen output in the previous step. 
@@ -48,10 +48,13 @@ In this step we opt to select the continuous version of the trait for analysis.
 ```
 
 #### Task
-- Review the contents of the output directory  out_bridge-AFR-single/prs-single_AFRICA and subfolders
+- Review the contents of the output directory  out_config-AFR-single/prs-single_AFRICA and subfolders
 
 #### Questions
 4. What evidence can you see that the analysis was successfully executed?
+
+#### Task
+Enter the plot command xdg-open ./out_config-AFR-single/prs-single_AFRICA/bridgePRS-single.png and inspect the accompanying slot
 
 <br><br> 
 
