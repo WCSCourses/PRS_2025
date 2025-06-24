@@ -25,7 +25,7 @@ As well as applying each of the steps in sequence, models can also be run separa
 #### Create configuration file for the target-only analysis
 In this example we will run BridgePRS across chromosomes 1 - 22. The first required step is to generate the configuration file needed to run the desired single ancestry BridgePRS analysis. The following command should be run from the main directory:
 ```
-bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix data/pop_europe/sumstats/eur.chr --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
+./bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix ./data/pop_europe/sumstats/eur.chr --genotype_prefix ./data/pop_africa/genotypes/afr_genotypes --phenotype_file ./data/pop_africa/phenotypes/afr_pheno.dat
 ```
 (BridgePRS produces on-screen information which tells you some of the tasks the software is doing behind the scenes).
 
@@ -43,7 +43,7 @@ In the next code snippet the file path of the newly created .config (configurati
 Now that we have our African configuration file prepared we are ready to perform the single-ancestry BridgePRS analysis.
 In this step we opt to select the continuous version of the trait for analysis.
 ```
-bridgePRS prs-single run -o out_config-AFR-single --pop africa --config_files out_config-AFR-single/save/primary.AFR.config --phenotype y
+./bridgePRS prs-single run -o out_config-AFR-single --pop africa --config_files out_config-AFR-single/save/primary.AFR.config --phenotype y
 ```
 
 #### Task
@@ -59,7 +59,7 @@ BridgePRS is most commonly used to combine the power of a smaller ancestry-match
 
 #### Create configuration file for base and target populations
 ```
-bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr --sumstats_suffix .glm.linear.gz .glm.linear.gz --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
+./bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr --sumstats_suffix .glm.linear.gz .glm.linear.gz --genotype_prefix data/pop_africa/genotypes/afr_genotypes --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
 ```
 #### Question
 5. Carefully check the information given in the on-screen output: (i) How many different .config files have been produced
@@ -74,7 +74,7 @@ bridgePRS check pops -o out_config-EUR-AFR-easyrun --pop AFR EUR --sumstats_pref
 ### Multi-ancestry BRIDGEPRS analysis:
 Add the missing peices of information to the code below, as you enter it into your terminal.
 ```
-bridgePRS easyrun go -o out_easyrun-EUR-AFR --config_files target.AFR.config base.EUR.config --fst --phenotype y
+./bridgePRS easyrun go -o out_easyrun-EUR-AFR --config_files target.AFR.config base.EUR.config --fst --phenotype y
 ```
 
 #### Tasks
