@@ -23,7 +23,7 @@ As well as applying each of the steps in sequence, models can also be run separa
 
 ```
 R
-install.packages(c("BEDMatrix","boot","data.table","doMC","glmnet","MASS","optparse","parallel","R.utils"))
+install.packages(c("BEDMatrix","boot","data.table","doMC","glmnet","MASS","optparse","parallel","R.utils", lib = "./R_library"))
 ```
 ### BridgePRS Scenario 1: Application of African GWAS weights to an African target group
 
