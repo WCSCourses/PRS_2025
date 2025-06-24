@@ -30,7 +30,7 @@ install.packages(c("BEDMatrix","boot","data.table","doMC","glmnet","MASS","optpa
 #### Create configuration file for the target-only analysis
 In this example we will run BridgePRS across chromosomes 1 - 22. The first required step is to generate the configuration file needed to run the desired single ancestry BridgePRS analysis. The following command should be run from the main directory:
 ```
-./bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix ./data/pop_europe/sumstats/eur.chr --genotype_prefix ./data/pop_africa/genotypes/afr_genotypes --phenotype_file ./data/pop_africa/phenotypes/afr_pheno.dat
+./bridgePRS check pop -o out_config-AFR-single --pop AFR --sumstats_prefix ./data/pop_AFR/sumstats/AFR.chr --genotype_prefix ./data/pop_africa/genotypes/chr --phenotype_file ./data/pop_AFR/phenotypes/afr_pheno.dat
 ```
 (BridgePRS produces on-screen information which tells you some of the tasks the software is doing behind the scenes).
 
