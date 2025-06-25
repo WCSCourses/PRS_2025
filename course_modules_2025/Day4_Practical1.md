@@ -116,6 +116,11 @@ The next step is to create a plot the results
  
  # Save the plot with specified dimensions
  ggsave("ancestry_plot.png", plot = p, width = 10, height = 6, units = "in", dpi = 300)
+
+# Close R using the command q() and when prompted whether to save workspace image enter "n" for no
+
+# In Bash enter the following command to view the plotted admixture report:
+xdg-open ancestry_plot.png
 ```
 #### Questions
 ##### (i) How do ancestry assignments vary across the 28 individuals shown in the plot? (Use the scale to interpret ancestry proportions for specific individuals)
@@ -123,7 +128,8 @@ The next step is to create a plot the results
 
 ### Part 3: Local Ancestry Inference 
 
-Next we will use the RFMix software to calculate local ancestry on chromosome 22 for the same 28 individuals. The RFMix algorithm uses an unsupervised learning algorithm.
+Next, we would like to annotate each genome with information about the ancestry of an individual chromosomal segment. This procedure is called local ancestry inference and it can be used to incorporate information about the ancestral origin of individual SNPs for more personalised PRS calculation within admixed individuals.
+We will use the RFMix software to calculate local ancestry on chromosome 22 for the same set of 28 individuals. The RFMix algorithm uses an unsupervised learning algorithm. In this instance, “unsupervised learning” means that RFMix detects patterns in haplotype structure and groups similar segments together without needing pre-assigned ancestry labels, allowing it to infer each segment’s ancestral origin directly from the genetic data. Here, a haplotype refers to the specific combination of alleles at neighbouring loci along a chromosome that tend to be inherited together as a block.
 ```
 # Run the following UNIX command from the home directory
 module load cmake
