@@ -326,10 +326,11 @@ ggsave(
 xdg-open local_ancestry_chromosome22_5Mb_subregion.png
 ```
 #### Questions
-##### (i) How many different continental ancestries do you see represented across the 58 strands?
+##### (i) How many different continental ancestries do you see represented in this 5 megabase block, across the 58 strands (corresponding to 29 individuals)?
 
 
 ### Part 5: Formatting of admixture files for analysis using PRSice
+We now want to integrate the genotype data and local ancestry data for the 29 individuals into the same file. We will do this in two steps. From there we will create a custom set of Plink files and use them to perform an ancestry-informed version of the normal Prsice2 analysis, to evaluate efficacy in our small admixed cohort.
 
 #### Step 1 - Convert phased genotypes to GenomicRange format
 ```
@@ -389,9 +390,6 @@ gr_obj_chr22 <- makeGRangesFromDataFrame(chr22_haplo_long, ignore.strand = FALSE
 
 # Save the GRanges object
 saveRDS(gr_obj_chr22, file = "./out/rfmix/chr22_phased_gr.rds")
-
-# Clean up memory
-clean_memory(c("vcfr_inputfile_chr22", "extracted_haps22", "merge_chr22", "haps_df", "haps_dt", "snp_info_df", "chr22_haplo_long", "gr_obj_chr22"))
 ```
 
 ### Part 5: Step 2 - Merge genotypes from Step 1 with local ancestry calls by RFMix
@@ -496,6 +494,8 @@ colnames(LA_final)[1:3] <- c("CHROM", "BP", "ID")
 # Write final tables
 write.table(geno_final, "./out/rfmix/chr22_geno.txt", row.names = FALSE, quote = FALSE)
 write.table(LA_final, "./out/rfmix/chr22_LA.txt", row.names = FALSE, quote = FALSE)
+
+# Close R using the command q() and when prompted whether to save workspace image enter "n" for no
 ```
 
 #### Part 5: Step 4 - Use custom software (RFTransform) to create Plink files for input into PRSice
@@ -530,7 +530,7 @@ done
 Rscript ./software/PRSice.R \
 --prsice ./software/PRSice_linux \
 --base ./data/plink/AFR-BMI.Phenotype.glm.linear \
---extract ./data/plink/snp.valid \
+--extract ./data/plink/BMI_AFR-base.valid \
 --A1 A1 \
 --pvalue P \
 --stat BETA \
@@ -546,7 +546,7 @@ Rscript ./software/PRSice.R \
 Rscript ./software/PRSice.R \
 --prsice ./software/PRSice_linux \
 --base ./data/plink/EUR-BMI.Phenotype.glm.linear \
---extract ./data/plink/snp.valid \
+--extract ./data/plink/BMI_EUR-base.valid \
 --A1 A1 \
 --pvalue P \
 --stat BETA \
@@ -567,7 +567,7 @@ library(dplyr)
 file1 <- read.table("./out/prsice/BMI_EUR-base.best", header = TRUE, check.names=F)
 file2 <- read.table("./out/prsice/BMI_AFR-base.best", header = TRUE, check.names=F)
 
-# Add the fourth column of both files
+# Sum the fourth column ($PRS) of both files
 file1$PRS_SUM <- file1$PRS + file2$PRS
 
 # Load the phenotype data
