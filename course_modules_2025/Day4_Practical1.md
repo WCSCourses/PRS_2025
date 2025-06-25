@@ -500,7 +500,7 @@ write.table(LA_final, "./out/rfmix/chr22_LA.txt", row.names = FALSE, quote = FAL
 
 #### Part 5: Step 4 - Use custom software (RFTransform) to create Plink files for input into PRSice
 ```
-module load cmake
+# This section of the code will generate the custom Plink files. It uses a custom-build software not available anywhere else.
 ./software/RFTransform/build/RFTransformer ./out/rfmix/chr22_geno.txt ./out/rfmix/chr22_LA.txt ./out/plink/chr22
 
 # Perform general QC ahead of running PRSice on ancestry-deconvolved individuals
@@ -524,6 +524,9 @@ for i in {22..22}; do
 		--make-bed \
 		--out ./out/plink//chr${i}-EUR.mac
 done
+
+# The chromosome 22 genetic data contained in the above output files has been divided into separate European and African components for each individual in the analysis.
+# The next section of code will perform separate plink analyses for each ancestry component using weights from ancestry-matched summary statistics.
 
 # PRSice - Generate ancestry-specific weights
 # AFR
@@ -560,6 +563,7 @@ Rscript ./software/PRSice.R \
 ```
 
 #### Part 5: Step 5 - Evaluate the Admixture-informed PRS
+We are now ready to combine the two sets of polygenic risk scores per individual to ascertain and evaluate their full PRS.
 ```
 library(dplyr)
 
