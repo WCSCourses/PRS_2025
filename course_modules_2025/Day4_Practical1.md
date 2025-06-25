@@ -74,7 +74,7 @@ We will now run an analysis using the software ADMIXTURE to calculate global anc
  ./software/admixture ./data/plink/samples_n28_qc_thin.bed 2 --supervised -j4
 ```
 #### **Questions**
-##### (i) What do you think the number specified after the inout file represents?
+##### (i) What do you think the number specified after the input file represents?
 
 The next step is to create a plot the results
 ```
@@ -84,8 +84,8 @@ The next step is to create a plot the results
  library(reshape2)
  
  # Read the data from files
- fam <- read.table(".data/plink/samples_n28_qc_thin.fam", header = FALSE)
- pop <- read.table(".data/plink/samples_n28_qc_thin.pop", header = FALSE)
+ fam <- read.table("./data/plink/samples_n28_qc_thin.fam", header = FALSE)
+ pop <- read.table("./data/plink/samples_n28_qc_thin.pop", header = FALSE)
  Q <- read.table("./samples_n28_qc_thin.2.Q", header = FALSE)
  
  # Merge the data into one data frame
