@@ -563,7 +563,7 @@ Rscript ./software/PRSice.R \
 ```
 
 #### Part 5: Step 5 - Evaluate the Admixture-informed PRS
-We are now ready to combine the two sets of polygenic risk scores per individual to ascertain and evaluate their full PRS.
+We are now ready to combine the two sets of polygenic risk scores per individual, in order to ascertain and evaluate the full admixture-aware PRS performance for each individual.
 ```
 library(dplyr)
 
@@ -607,3 +607,4 @@ cat("R-squared for PRS_SUM: ", r_squared_sum, "\n")
 
 #### **Questions**
 ##### (i) How does the R-squared of the combined-ancestry PRS perform relative to the 2 partial-genome PRSs?
+##### (ii) How do you rationalise the result obtained?
