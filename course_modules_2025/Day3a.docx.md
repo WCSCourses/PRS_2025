@@ -20,30 +20,31 @@ After completing this practical, you should be able to:
   4. Understand and identify the impact of sample size on the predictive utility of PRS.
   5. Understand the challenges and limitations of applying PRS in populations with diverse genetic backgrounds.
 
+## Base and Target datasets
+In this practical, we will compute a PRS for systolic blood pressure (SBP) and assess its performance across European and African ancestry datasets to clearly illustrate the portability problem.
 
-## Base and Target datasets 
-In this practical, we will compute a PRS for systolic blood pressure (SBP) and assess it performance across European and African ancestry datasets to clearly illustrate the portability problem. 
-
-**We will assess the predictive utility of 3 scores**:
+**We will assess the predictive utility of 2 scores**:
 
 **ANCESTRY-MATCHED**
-1. EUR base - EUR target: Utilise European summary statistics as the training data and individual-level genotyped data from Europeans as the target dataset. 
-2. AFR base - AFR target: Utilise African summary statistics as the training data and individual-level genotyped data from Africans as the target dataset.
+1. AFR base - AFR target: Utilise African summary statistics as the training data and individual-level genotyped data from Africans as the target dataset.
 
 **ANCESTRY-UNMATCHED**
+ 
+2. EUR base - AFR target: Utilise European summary statistics as the training data and individual-level genotyped data from Africans as the target dataset.
 
-3. EUR base - AFR target: Utilise European summary statistics as the training data and individual-level genotyped data from Africans as the target dataset. 
+Please note that the sample sizes of the individual-level target data are as follows:
+Europeans (n = ~500) and Africans (n = ~650).
 
-Please note that the sample sizes of the individual-level target data are as follows: 
-Europeans (n = ~500) and Africans (n = ~650). 
-
-* Note: This is simulated data with no real-life biological meaning or implication. 
+* Note: This is simulated data with no real-life biological meaning or implication.
 
 |**Dataset**|**Source**|**Description**|
 |:---:|:---:|:---:|
 |Base dataset (EUR, AFR)|simulated |GWAS summary stats of SBP|
-|Target dataset (EUR, AFR)|simulated |EUR (n = ~500), AFR (n = ~650)| 
-
+|Target dataset (EUR, AFR)|simulated |EUR (n = ~500), AFR (n = ~650)|
+mkdir Day3
+wget https://wcs_data_transfer.cog.sanger.ac.uk/3b.zip
+unzip 3b.zip
+ 
 
 ## Downloading Datasets
  
@@ -106,21 +107,21 @@ Now, calculate PRS using **PRSice 2**
 #### Scenario 1: Predicting from EUR training to EUR target data:
 
 ```sh
-Rscript /home/manager/PRSice_linux/PRSice.R \
---prsice /home/manager/PRSice_linux/PRSice \
---base /home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
+Rscript /home/manager/PRSice.R \
+--prsice /home/manager/PRSice_linux \
+--base /home/manager/Day3/data/sumstats_by_chr/AFR-SBP-simulated.sumstats\
 --A1 A1 \
 --pvalue P \
 --no-clump \
 --beta \
---snp SNP \
+--snp ID \
 --score sum \
---target /home/manager/data/Data_Day4/data/EUR_1kg.hm3.only.csx \
+--target /home/manager/Day3/data/AFR_1kg.hm3.only.csx \
 --binary-target F \
---pheno /home/manager/data/Data_Day4/data/sbp_eur_1kg.sim_pheno \
---pheno-col pheno100 \
+--pheno /home/manager/Day3/data/sbp_afr_1kg.sim_pheno \
+--pheno-col pheno50 \
 --thread 8 \
---out /home/manager/data/Data_Day4/data/out/SBP.eur.eur  
+--out /home/manager/Day3/out/SBP.afr.afr  
 ```
 
 ### Key code parameters
@@ -384,21 +385,7 @@ cat /home/manager/data/Data_Day4/data/out/SBP.afr.afr.summary
 #### Scenario 3: Predicting from EUR training to AFR target data
 
 ```sh
-Rscript /home/manager/PRSice_linux/PRSice.R \
---prsice /home/manager/PRSice_linux/PRSice \
---base /home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx \
---A1 A1 \
---pvalue P \
---no-clump \
---beta \
---snp SNP \
---score sum \
---target /home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
---binary-target F \
---pheno /home/manager/data/Data_Day4/data/sbp_afr_1kg.sim_pheno \
---pheno-col pheno50 \
---thread 8 \
---out /home/manager/data/Data_Day4/data/out/SBP.eur.afr
+Rscript /home/manager/PRSice.R --prsice /home/manager/PRSice_linux --base /home/manager/Day3/data/sumstats_by_chr/EUR-SBP-simulated.sumstats --A1 A1 --pvalue P --no-clump --beta --snp ID --score sum --target /home/manager/Day3/data/AFR_1kg.hm3.only.csx --binary-target F --pheno /home/manager/Day3/data/sbp_afr_1kg.sim_pheno --pheno-col pheno50 --thread 8 --out /home/manager/Day3/out/SBP.eur.afr
 ```
 
 View the output file: 
