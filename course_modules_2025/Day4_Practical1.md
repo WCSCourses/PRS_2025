@@ -322,6 +322,8 @@ ggsave(
   dpi      = 300
 )
 
+# Navigate to the output folder ./out/rfmix and open the output file using the below command:
+xdg-open local_ancestry_chromosome22_5Mb_subregion.png
 ```
 #### Questions
 ##### (i) How many different continental ancestries do you see represented across the 58 strands?
