@@ -152,12 +152,12 @@ done
 ```
 Here’s what each part of that loop and RFMix flag does, and why it matters:
 
-for i in {22..22}; do … done
-What it is: A bash loop that sets i to each integer from 22 to 22 (so just chromosome 22 here).
-Why it’s important: Lets you easily run the exact same command over a range of chromosomes by changing the bounds (e.g. {1..22}), without copy-pasting.
+for i in {22..22}; do … done <br/>
+What it is: A bash loop that sets i to each integer from 22 to 22 (so just chromosome 22 here).<br/>
+Why it’s important: Lets you easily run the exact same command over a range of chromosomes by changing the bounds (e.g. {1..22}), without copy-pasting.<br/>
 
--f ./data/rfmix/chr1-22_phased.bcf.gz
-What it is: The phased haplotypes file for all samples, in BCF/VCF format.
+-f ./data/rfmix/chr1-22_phased.bcf.gz <br/>
+What it is: The phased haplotypes file for all samples, in BCF/VCF format.<br/>
 Why it’s important: RFMix needs phased data (i.e. which alleles are on each parental chromosome) to model the sequential inheritance patterns that distinguish ancestry tracts.
 
 -r ./reference/chr22_reference.bcf
