@@ -8,8 +8,7 @@
 
 
 ### Part1: Plot Decay of Ancestry LD over time
-Here we explore how Admixture LD varies over time and as a function of the genetic distance between loci.
-In R:
+Here we explore how Admixture LD varies over time and as a function of the genetic distance between loci. This script is entirely generating (simulating) the decay curves to be plotted.In R:
 ```
 library(ggplot2)
 library(reshape2)
