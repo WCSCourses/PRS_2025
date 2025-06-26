@@ -14,11 +14,14 @@ library(ggplot2)
 library(reshape2)
 library(viridis)
 
-#range of values of r (recombination fraction)
+# Define a sequence of recombination fractions (r) from 0 to 0.5 in steps of 0.1
 r = seq(0, 0.5, 0.1)
+
+# Initialize an empty matrix to store admixture LD values (Dt)
+# Rows correspond to different r values (length 6), columns to generations (1–10)
 dtmat = matrix(NA, nrow = 6, ncol = 10) # matrix to store values of dt
 
-
+# Loop over each recombination fraction
 for(i in 1:6){
   dt = 0.25
   for(j in 1:10){
@@ -27,7 +30,10 @@ for(i in 1:6){
   }
 }
 
+# Melt the matrix into a long data frame with columns: row (r index), column (generation), and Dt
 dtmat = reshape2::melt(dtmat)
+
+# Rename the automatically generated columns for clarity
 colnames(dtmat) = c("r","g","Dt")
 dtmat$r = (dtmat$r - 1)/10
 
