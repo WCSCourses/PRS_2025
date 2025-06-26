@@ -69,7 +69,7 @@ ggsave(filename = "./LD_decay.png",
 ##### (ii) How does recombination affect this relationship?
  
 ### Part 2: Global Ancestry Inference
-We will now run an analysis using the software ADMIXTURE to calculate global ancestry proportions across a sample of 28 individuals. Here we perform a supervised analysis. Please execute the following code from location ~/RFMIX_WCS_2024/data/plink/
+We will now run an analysis using the software ADMIXTURE to calculate global ancestry proportions across a sample of 28 individuals. Here we perform a supervised analysis. 
  ```
  ./software/admixture ./data/plink/samples_n28_qc_thin.bed 2 --supervised -j4
 ```
