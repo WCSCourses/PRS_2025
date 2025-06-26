@@ -160,33 +160,33 @@ Why it’s important: Lets you easily run the exact same command over a range of
 What it is: The phased haplotypes file for all samples, in BCF/VCF format.<br/>
 Why it’s important: RFMix needs phased data (i.e. which alleles are on each parental chromosome) to model the sequential inheritance patterns that distinguish ancestry tracts.
 
--r ./reference/chr22_reference.bcf
-What it is: The reference panel BCF/VCF for chromosome 22, containing known‐ancestry haplotypes.
-Why it’s important: These labeled haplotypes train the random‐forest classifier to recognize ancestry‐specific patterns in your target data.
+-r ./reference/chr22_reference.bcf <br/>
+What it is: The reference panel BCF/VCF for chromosome 22, containing known‐ancestry haplotypes.<br/>
+Why it’s important: These labeled haplotypes train the random‐forest classifier to recognize ancestry‐specific patterns in your target data.<br/>
 
---analyze-range=26.86-31.80
-What it is: Restricts inference to the genetic map window from 26.86 cM to 31.80 cM on the chromosome.
-Why it’s important: Focusing on a subregion speeds up computation and can improve accuracy if you only care about a particular locus or block.
+--analyze-range=26.86-31.80<br/>
+What it is: Restricts inference to the genetic map window from 26.86 cM to 31.80 cM on the chromosome.<br/>
+Why it’s important: Focusing on a subregion speeds up computation and can improve accuracy if you only care about a particular locus or block.<br/>
 
--m ./data/rfmix/1KG_superpop_vs_ID.txt
-What it is: The sample‐map file: each line maps a sample (or haplotype) ID to its population label.
-Why it’s important: RFMix uses these labels to teach the Randm Forest classifier which haplotype patterns correspond to which ancestral group.
+-m ./data/rfmix/1KG_superpop_vs_ID.txt<br/>
+What it is: The sample‐map file: each line maps a sample (or haplotype) ID to its population label.<br/>
+Why it’s important: RFMix uses these labels to teach the Randm Forest classifier which haplotype patterns correspond to which ancestral group.<br/>
 
---chromosome=${i}
-What it is: Tells RFMix which chromosome number to process—in this case, the value of i (22).
-Why it’s important: Ensures the tool applies the correct genetic map and reference panel for that chromosome.
+--chromosome=${i}<br/>
+What it is: Tells RFMix which chromosome number to process—in this case, the value of i (22).<br/>
+Why it’s important: Ensures the tool applies the correct genetic map and reference panel for that chromosome.<br/>
 
--g ./reference/1kg_chr1-22.gmap
-What it is: The genetic map file mapping physical positions (bp) to genetic distances (cM) for chromosomes 1–22.
-Why it’s important: Accurate local ancestry inference depends on knowing recombination rates; the genetic map lets RFMix translate base‐pair positions into recombination distances.
+-g ./reference/1kg_chr1-22.gmap<br/>
+What it is: The genetic map file mapping physical positions (bp) to genetic distances (cM) for chromosomes 1–22.<br/>
+Why it’s important: Accurate local ancestry inference depends on knowing recombination rates; the genetic map lets RFMix translate base‐pair positions into recombination distances.<br/>
 
---n-threads=4
-What it is: Number of CPU threads to use in parallel.
-Why it’s important: Speeds up the random‐forest training and ancestry assignment steps by leveraging multiple cores.
+--n-threads=4<br/>
+What it is: Number of CPU threads to use in parallel.<br/>
+Why it’s important: Speeds up the random‐forest training and ancestry assignment steps by leveraging multiple cores.<br/>
 
--o ./out/rfmix/chr${i}.local_ancestry
-What it is: The output prefix for all result files (e.g. .msp.tsv, .fb.tsv).
-Why it’s important: Organizes outputs per chromosome and ensures you can trace results back to the exact input settings.
+-o ./out/rfmix/chr${i}.local_ancestry<br/>
+What it is: The output prefix for all result files (e.g. .msp.tsv, .fb.tsv).<br/>
+Why it’s important: Organizes outputs per chromosome and ensures you can trace results back to the exact input settings.<br/>
 
 #### Questions
 ##### (i) ...
