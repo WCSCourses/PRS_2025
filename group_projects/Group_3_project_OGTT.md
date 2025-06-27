@@ -1,13 +1,7 @@
----
-title: Can PRSmix Predict if You Will Say No To the Doughnut? A Genetic Crystall Ball
-  for Type 2 Diabetes in African Populations (Using the Oral Glucose Tolerance Test
-  aka, The Sugar Rush Test
-author: "Himran Moundi, Andrea Sene, Olga Tendo, Pheziwe Mshunqwane, Nto Johnson Nto"
-date: "2025-06-27"
-output:
-  word_document: default
-  pdf_document: default
----
+
+# Group 3: Can PRSmix Predict if You Will Say No To the Doughnut? A Genetic Crystall Ball for Type 2 Diabetes in African Populations (Using the Oral Glucose Tolerance Test aka, The Sugar Rush Test
+
+## Author: Himran Moundi, Andrea Sene, Olga Tendo, Pheziwe Mshunqwane, Nto Johnson Nto
 
 ## 🧾 Introduction
 
@@ -77,6 +71,8 @@ ggplot(data, aes(x = log_2hrglc)) +
   ggtitle("Log-transformed 2hr Glucose Distribution") +
   theme_minimal()
 ```
+
+![Alt text](https://github.com/WCSCourses/PRS_2025/blob/main/group_projects/group3_images/image5.png)
 
 ## 🔍 Define PRS and Covariates
 ```{r}
@@ -192,6 +188,8 @@ ggplot(df_plot, aes(x = True, y = Predicted)) +
        y = "Predicted")
 ```
 
+
+
 ## 📜 Model Coefficients and Variable Importance
 ```{r}
 # Extract final model coefficients at best lambda
@@ -252,4 +250,4 @@ prs_r2_sorted <- sort(prs_r2, decreasing = TRUE)
   legend("topright", legend = c("Individual PRS", "Elastic Net"), fill = c("steelblue", "red"), bty = "n")
 ```
 
-
+![Alt text](https://github.com/WCSCourses/PRS_2025/blob/main/group_projects/group3_images/image5.png)
